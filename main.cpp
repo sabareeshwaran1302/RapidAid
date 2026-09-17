@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Graph.h"
+#include "Location.h"
 
 using namespace std;
 
@@ -10,7 +11,24 @@ int main()
     cout << "==================================" << endl;
     cout << endl;
 
-    // Create a graph with 5 locations
+    // Create locations
+    Location l0(0, "MIT", "Accident Spot");
+    Location l1(1, "Chromepet Hospital", "Hospital");
+    Location l2(2, "Tambaram Hospital", "Hospital");
+    Location l3(3, "Pallavaram", "Police Station");
+    Location l4(4, "Guindy", "Ambulance Station");
+
+    // Display locations
+    cout << "RAPIDAID LOCATIONS" << endl;
+    cout << "------------------" << endl;
+
+    l0.displayLocation();
+    l1.displayLocation();
+    l2.displayLocation();
+    l3.displayLocation();
+    l4.displayLocation();
+
+    // Create graph
     Graph city(5);
 
     // Add roads
@@ -20,7 +38,7 @@ int main()
     city.addRoad(2, 3, 4);
     city.addRoad(3, 4, 6);
 
-    // Display the graph
+    // Display road network
     city.displayGraph();
 
     return 0;
