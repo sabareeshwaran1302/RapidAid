@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Graph.h"
 #include "Location.h"
+#include "Ambulance.h"
 
 using namespace std;
 
@@ -40,6 +41,18 @@ int main()
 
     // Display road network
     city.displayGraph();
+
+    // Create ambulances
+    Ambulance a1(101, "Ravi", 4);
+    Ambulance a2(102, "Kumar", 3);
+
+    // Display ambulances
+    cout << endl;
+    cout << "RAPIDAID AMBULANCES" << endl;
+    cout << "-------------------" << endl;
+
+    a1.displayAmbulance();
+    a2.displayAmbulance();
 
     return 0;
 }
